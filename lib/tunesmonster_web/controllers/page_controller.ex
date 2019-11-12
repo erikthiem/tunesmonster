@@ -1,7 +1,7 @@
 defmodule TunesmonsterWeb.PageController do
   use TunesmonsterWeb, :controller
 
-  def index(conn, _params) do
-    render(conn, "index.html")
+  def index(conn, _) do
+    render(conn, "index.html", token: get_csrf_token())
   end
 end
